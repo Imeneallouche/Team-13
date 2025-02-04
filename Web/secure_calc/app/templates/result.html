@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Math Result</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            min-height: 100vh;
+            background: linear-gradient(135deg, #e0f7fa 0%, #80deea 100%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            overflow: hidden;
+        }
+
+        .result-container {
+            background: rgba(255, 255, 255, 0.9);
+            padding: 2.5rem;
+            border-radius: 20px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .title {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            color: #007BFF;
+            position: relative;
+            z-index: 1;
+        }
+
+        .expression {
+            color: #666;
+            margin-bottom: 1.5rem;
+            padding: 1rem;
+            background: rgba(0, 123, 255, 0.1);
+            border-radius: 12px;
+            word-break: break-all;
+            font-size: 1.2rem;
+            border: 2px solid rgba(0, 123, 255, 0.2);
+            position: relative;
+            z-index: 1;
+        }
+
+        .result {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #007BFF;
+            margin: 1.5rem 0;
+            animation: pulse 2s infinite;
+            position: relative;
+            z-index: 1;
+        }
+
+        .back-button {
+            display: inline-block;
+            padding: 1rem 2rem;
+            background: linear-gradient(135deg, #007BFF 0%, #0056b3 100%);
+            color: white;
+            text-decoration: none;
+            border-radius: 12px;
+            font-weight: 700;
+            transition: all 0.3s ease;
+            margin-top: 1rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .back-button:hover {
+            background: linear-gradient(135deg, #0056b3 0%, #004494 100%);
+        }
+
+        .back-button:active {
+            background: linear-gradient(135deg, #004494 0%, #003366 100%);
+        }
+
+        .background-shapes {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            z-index: 0;
+        }
+
+        .background-shapes div {
+            position: absolute;
+            background: rgba(0, 123, 255, 0.1);
+            border-radius: 50%;
+            opacity: 0.5;
+            animation: move 5s linear infinite;
+        }
+
+        .background-shapes div:nth-child(1) {
+            width: 100px;
+            height: 100px;
+            top: -50px;
+            left: -50px;
+            animation-delay: 0s;
+        }
+
+        .background-shapes div:nth-child(2) {
+            width: 150px;
+            height: 150px;
+            top: 100px;
+            left: -100px;
+            animation-delay: 1s;
+        }
+
+        .background-shapes div:nth-child(3) {
+            width: 200px;
+            height: 200px;
+            bottom: -100px;
+            right: -100px;
+            animation-delay: 2s;
+        }
+
+        @keyframes move {
+            0% { transform: translateX(0) translateY(0); }
+            50% { transform: translateX(100px) translateY(100px); }
+            100% { transform: translateX(0) translateY(0); }
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
+        }
+
+        .result-container {
+            animation: float 6s ease-in-out infinite;
+        }
+    </style>
+</head>
+<body>
+    <div class="result-container">
+        <div class="background-shapes">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <h1 class="title">Result 🎯</h1>
+        <div class="result">
+            {{result}}
+        </div>
+        <a href="/" class="back-button">← Try Another</a>
+    </div>
+</body>
+</html>
