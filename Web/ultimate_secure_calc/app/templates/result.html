@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Ultimate Secure Calculator Result</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Courier New', monospace;
+            min-height: 100vh;
+            background: #000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            color: #00ff00;
+        }
+
+        .result-container {
+            background: rgba(0, 20, 0, 0.95);
+            padding: 2.5rem;
+            border-radius: 10px;
+            box-shadow: 0 0 30px rgba(0, 255, 0, 0.2);
+            width: 80%;
+            max-width: 800px;
+            border: 1px solid rgba(0, 255, 0, 0.3);
+        }
+
+        .title {
+            text-align: center;
+            margin-bottom: 2rem;
+            font-size: 2rem;
+            font-weight: bold;
+            text-shadow: 0 0 10px rgba(0, 255, 0, 0.5);
+        }
+
+        .expression {
+            background: rgba(0, 40, 0, 0.9);
+            padding: 1rem;
+            border-radius: 5px;
+            margin-bottom: 1.5rem;
+            border: 1px solid rgba(0, 255, 0, 0.3);
+            word-wrap: break-word;
+            white-space: pre-wrap;
+            font-size: 1rem;
+            max-height: 300px;
+            overflow-y: auto;
+        }
+
+        .result {
+            font-size: 1.5rem;
+            margin: 1.5rem 0;
+            padding: 1rem;
+            background: rgba(0, 40, 0, 0.9);
+            border: 1px solid rgba(0, 255, 0, 0.3);
+            border-radius: 5px;
+            word-wrap: break-word;
+            white-space: pre-wrap;
+            max-height: 400px;
+            overflow-y: auto;
+        }
+
+        .back-button {
+            display: inline-block;
+            width: 100%;
+            padding: 1rem;
+            background: rgba(0, 40, 0, 0.9);
+            color: #00ff00;
+            text-decoration: none;
+            text-align: center;
+            border: 2px solid #00ff00;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+
+        .back-button:hover {
+            background: rgba(0, 60, 0, 0.9);
+            box-shadow: 0 0 20px rgba(0, 255, 0, 0.3);
+        }
+
+        /* Scrollbar styling */
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: rgba(0, 20, 0, 0.9);
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #00ff00;
+            border-radius: 4px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #00cc00;
+        }
+    </style>
+</head>
+<body>
+    <div class="result-container">
+        <h1 class="title">COMPUTATION_RESULT</h1>
+
+        <div class="result">Output: {{ result }}</div>
+        
+        <a href="/" class="back-button">[RETURN_TO_CALCULATOR]</a>
+    </div>
+</body>
+</html>
