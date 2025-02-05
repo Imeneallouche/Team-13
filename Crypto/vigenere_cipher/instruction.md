@@ -4,7 +4,7 @@ Task at hand: A message cloaked in more complex wraps awaits your unraveling ski
 
 ### Steps:
 1. Retrieve `encrypted_message.txt` from the repository.
-2. Apply your knowledge of polyalphabetic ciphers to reveal the hidden text. The keyword relates closely to the context of this competition.
+2. Apply your knowledge of polyalphabetic ciphers to reveal the hidden text, the keyword relates closely to the context of this competition.
 3. Format your findings into a flag as `shellmates{unveiled_text}`, adapting the revealed message into the required format.
 
 ### Hint:
