@@ -1,0 +1,12 @@
+name: "Steganography in Encrypted Image"
+author: "M4r0u4n3"
+category: "crypto"
+description: |
+  Welcome to the Stegano in Encrypted Image challenge!
+  In this challenge, you are tasked with retrieving a hidden flag embedded inside an encrypted image file.
+  The flag is hidden in the image, but to access it, you must first decrypt the image.
+hints:
+  - "The image has been encrypted with AES."
+  - "The encryption key is '0123456789abcdef'."
+  - // or just we can give them the source code (encryptAES) or idk hhh
+value: 200
