@@ -11,7 +11,8 @@ Your task: Decode the hidden message. A traditional method, but not straightforw
 ### Hint:
 
 1. Remember, every emperor has his day, and for this message, it’s thrice counted.
-2. changes without the shift: 
+2. number range: 1-9
+3. changes without the shift: 
    - 'e' = '3'
    - 'i' = '1'
    - 's' = '5'
