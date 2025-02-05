@@ -4,7 +4,7 @@ Your task: Decode the hidden message. A traditional method, but not straightforw
 
 ### Steps:
 
-1. Acquire `encrypted_message.txt`.
+1. Acquire `encrypted_message.txt`
 2. The solution lies not just in the shift but in your approach to unscrambling historical shifts.
 3. Once decrypted, craft the flag as `shellmates{your_solution_here}`, where your solution mirrors the simplicity of ancient secrets. Convert all spaces and punctuation to underscores and use lowercase letters only.
 
